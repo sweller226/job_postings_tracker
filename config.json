@@ -1,0 +1,78 @@
+{
+  "target": {
+    "term": "summer",
+    "year": 2027
+  },
+  "filters": {
+    "include_inactive": false,
+    "include_unstated": false,
+    "section_exclude": "(new.?grad|full.?time|phd|return offer)",
+    "title_exclude": "(new.?grad|university.?grad|entry.?level)",
+    "title_include": null,
+    "location_include": null
+  },
+  "notifications": {
+    "max_individual": 12,
+    "priority": 3,
+    "ntfy_server": "https://ntfy.sh"
+  },
+  "http": {
+    "timeout": 30,
+    "retries": 2
+  },
+  "sources": [
+    {
+      "name": "vanshb03",
+      "type": "json",
+      "url": "https://raw.githubusercontent.com/vanshb03/Summer2027-Internships/dev/.github/scripts/listings.json",
+      "home": "https://github.com/vanshb03/Summer2027-Internships",
+      "default_season": "Summer 2027",
+      "fields": {
+        "url": "url",
+        "title": "title",
+        "company": "company_name",
+        "location": "locations",
+        "season": "season",
+        "active": "active",
+        "visible": "is_visible"
+      }
+    },
+    {
+      "name": "zshah101",
+      "type": "json",
+      "url": "https://raw.githubusercontent.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships/main/data/jobs.json",
+      "home": "https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships",
+      "default_season": null,
+      "fields": {
+        "url": "url",
+        "title": "title",
+        "company": "company",
+        "location": "location",
+        "season": "season",
+        "seasons": "seasons",
+        "active": "is_open"
+      }
+    },
+    {
+      "name": "SimplifyJobs",
+      "type": "readme",
+      "url": "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/README.md",
+      "home": "https://github.com/SimplifyJobs/Summer2027-Internships",
+      "default_season": "Summer 2027"
+    },
+    {
+      "name": "speedyapply",
+      "type": "readme",
+      "url": "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/README.md",
+      "home": "https://github.com/speedyapply/2027-SWE-College-Jobs",
+      "default_season": "Summer 2027"
+    },
+    {
+      "name": "euro-tech",
+      "type": "readme",
+      "url": "https://raw.githubusercontent.com/LorenzoLaCorte/european-tech-internships-2026/main/README.md",
+      "home": "https://github.com/LorenzoLaCorte/european-tech-internships-2026",
+      "default_season": null
+    }
+  ]
+}
