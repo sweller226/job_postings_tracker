@@ -77,16 +77,19 @@ def build_notifications(items, cfg, sources_by_name) -> list[dict]:
         lines = [x for x in (it["location"], f"via {it['source']}", it["url"]) if x]
         notes.append({"title": title[:200], "message": "\n".join(lines),
                       "url": it["url"], "priority": prio})
-    rest = items[cap:]
-    if rest:
+    # Overflow: one summary per board, so a notification never mixes boards.
+    by_source: dict[str, list[dict]] = {}
+    for it in items[cap:]:
+        by_source.setdefault(it["source"], []).append(it)
+    for source, rest in by_source.items():
+        home = sources_by_name.get(source, {}).get("home")
         shown = [f"• {' — '.join(x for x in (it['company'], it['title']) if x) or it['url']}"
                  for it in rest[:20]]
         if len(rest) > 20:
             shown.append(f"…and {len(rest) - 20} more")
-        srcs = {it["source"] for it in rest}
-        home = sources_by_name[srcs.pop()].get("home") if len(srcs) == 1 else None
-        notes.append({"title": f"+{len(rest)} more new {label} postings",
-                      "message": "\n".join(shown), "url": home, "priority": prio})
+        header = f"From {home.removeprefix('https://')}:" if home else f"From {source}:"
+        notes.append({"title": f"+{len(rest)} more new {label} postings from {source}",
+                      "message": "\n".join([header, *shown]), "url": home, "priority": prio})
     return notes
 
 

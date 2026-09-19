@@ -84,8 +84,10 @@ or emoji display correctly. Tapping a notification opens the apply link.
 
 ### How many notifications to expect
 
-- **Each run sends at most 13:** up to `max_individual` (12) individual alerts, plus
-  one "+N more" summary.
+- **Each run sends at most 17:** up to `max_individual` (12) individual alerts, plus
+  one "+N more" summary per board that had more (at most 5).
+  - In practice it's 13 or 14, because big batches almost always come from one or two
+    boards.
 - **Typical volume:**
   - In mid-September 2026 these lists added about **74** new postings a day after
     filtering and dedupe, with a peak of about 150.
@@ -94,7 +96,7 @@ or emoji display correctly. Tapping a notification opens the apply link.
 - **ntfy.sh free tier:** **250 messages a day** per IP address, plus a burst limit of
   60 requests that refills at one per 5 seconds.
   - Normal use stays well under that.
-  - The theoretical worst case is 72 runs × 13 = 936.
+  - The theoretical worst case is 72 runs × 17 = 1,224.
   - If the limit is already hit when a run starts, every delivery fails. That run's
     postings aren't marked as seen, so a later run retries them.
   - If the limit is hit partway through a run, the alerts sent before it still arrive,
@@ -141,9 +143,13 @@ or emoji display correctly. Tapping a notification opens the apply link.
   job, the first source in `config.json` order that keeps it owns it, and you get one
   notification. If one board's copy is filtered out (for example because of a wrong
   location), another board's copy can still get through.
-- A run sends at most `max_individual` (default 12) individual notifications. Anything
-  beyond that goes into a single "+N more new Summer 2027 postings" summary, because
-  these repos sometimes add 50+ roles at once.
+- A run sends at most `max_individual` (default 12) individual notifications, because
+  these repos sometimes add 50+ roles at once. Anything beyond that goes into a
+  summary:
+  - There's **one summary per board**, such as "+25 more new Summer 2027 postings from
+    SimplifyJobs", so a notification never mixes boards.
+  - Each summary opens with the board's GitHub path and lists up to 20 of its
+    postings. Tapping it opens that board.
 
 ### Safety rails
 
