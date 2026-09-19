@@ -90,6 +90,34 @@ def build_notifications(items, cfg, sources_by_name) -> list[dict]:
     return notes
 
 
+def send_test(session, cfg, example: dict | None) -> dict[str, Exception | None]:
+    """Send one test notification to every configured channel.
+
+    `example` is a state/seen.json entry; the test is rendered exactly like a real alert
+    for it (so tapping it exercises the apply link), with a [TEST] marker.
+    Returns {channel: None on success, else the error}.
+    """
+    if example:
+        item = {"company": example.get("company", ""), "title": example.get("title", ""),
+                "location": "", "source": example.get("source", ""),
+                "url": example["url"], "canonical": example["url"]}
+        note = build_notifications([item], cfg, {})[0]
+    else:
+        note = {"title": "Internship watcher", "message": "", "url": None,
+                "priority": int(cfg["notifications"]["priority"])}
+    note["title"] = f"[TEST] {note['title']}"[:200]
+    note["message"] = ("Test from the internship watcher: notifications are working.\n\n"
+                       + note["message"]).strip()
+    results = {}
+    for name in configured_channels():
+        try:
+            CHANNELS[name][1](session, note, cfg["notifications"])
+            results[name] = None
+        except Exception as e:
+            results[name] = e
+    return results
+
+
 def deliver(session, notes, cfg) -> tuple[int, int]:
     """Send every note to every configured channel. Returns (successes, failures)."""
     ok = failed = 0

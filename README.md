@@ -49,8 +49,20 @@ Other GitHub scheduling behavior to expect:
 4. **Seed the state.** Go to Actions → *Watch internship repos* → **Run workflow**.
    The first run with an empty state records every current posting (about 2,700)
    **without notifying you**. You can tick `seed_only` to make that explicit.
-5. That's it. From then on, every scheduled run notifies you only about postings that
+5. **Send a test notification.** Go to Actions → *Test notification* → **Run workflow**.
+   - Your phone should get one `[TEST]` alert, formatted exactly like a real one.
+     Tapping it opens that posting's apply link.
+   - The run fails (red ✗) if no channel is configured or any channel rejects the
+     message, and the log says why.
+   - It never changes `state/seen.json`.
+
+   You can do the same locally with `NTFY_TOPIC=… python watcher.py --test-notify`.
+6. That's it. From then on, every scheduled run notifies you only about postings that
    are new since the last run.
+
+> **Use repository secrets, not environment secrets.** Secrets stored in a GitHub
+> *environment* are only given to jobs that name that environment, and these workflows
+> don't. If the test says "no notification channels configured", that's usually why.
 
 ### The ntfy topic secret
 
@@ -69,6 +81,30 @@ python -c "import secrets; print('intern-' + secrets.token_urlsafe(18))"
 
 Each notification is sent as JSON to the server root, so company names with accents
 or emoji display correctly. Tapping a notification opens the apply link.
+
+### How many notifications to expect
+
+- **Each run sends at most 13:** up to `max_individual` (12) individual alerts, plus
+  one "+N more" summary.
+- **Typical volume:**
+  - In mid-September 2026 these lists added about **74** new postings a day after
+    filtering and dedupe, with a peak of about 150.
+  - They arrive in batches across the day's ~72 runs, so expect roughly **50–100
+    alerts a day** in peak season and far fewer later.
+- **ntfy.sh free tier:** **250 messages a day** per IP address, plus a burst limit of
+  60 requests that refills at one per 5 seconds.
+  - Normal use stays well under that.
+  - The theoretical worst case is 72 runs × 13 = 936.
+  - If the limit is already hit when a run starts, every delivery fails. That run's
+    postings aren't marked as seen, so a later run retries them.
+  - If the limit is hit partway through a run, the alerts sent before it still arrive,
+    but the rest of that run's alerts are skipped.
+  - To get fewer alerts, lower `max_individual`, or narrow the filters with
+    `title_include` / `location_include`.
+- **Other channels:**
+  - Pushover allows 10,000 messages a month per app.
+  - Discord webhooks have no daily cap, but they are rate-limited per request, which
+    `notify.py` handles by retrying.
 
 ## How "new" is decided
 

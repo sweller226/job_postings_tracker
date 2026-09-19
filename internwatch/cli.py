@@ -6,6 +6,7 @@ Environment:
   DRY_RUN=1      fetch, parse, filter, diff and print; send nothing, write nothing
   SEED_ONLY=1    record every current posting as seen without notifying
   VERBOSE=1      print a few example postings for every drop reason
+  TEST_NOTIFY=1  send one [TEST] notification to every configured channel and exit
   NTFY_TOPIC, NTFY_SERVER (default https://ntfy.sh), NTFY_TOKEN
   PUSHOVER_TOKEN, PUSHOVER_USER
   DISCORD_WEBHOOK_URL
@@ -25,7 +26,7 @@ import requests
 
 from .config import load_config
 from .filtering import filter_items
-from .notify import build_notifications, configured_channels, deliver
+from .notify import build_notifications, configured_channels, deliver, send_test
 from .parsers import PARSERS
 from .state import load_state, save_state
 from .urls import dedupe_key
@@ -53,6 +54,21 @@ def _flag(name: str) -> bool:
     return os.environ.get(name, "").strip().lower() in ("1", "true", "yes", "on")
 
 
+def run_test_notify(session, cfg, state) -> int:
+    """Send one [TEST] alert to every configured channel; non-zero exit if any fails."""
+    channels = configured_channels()
+    if not channels:
+        print("ERROR: no notification channels configured. Add NTFY_TOPIC (or the Pushover / "
+              "Discord secrets) as a *repository* secret; environment secrets are not passed "
+              "to these workflows.", file=sys.stderr)
+        return 1
+    entries = sorted(state["seen"].values(), key=lambda e: e.get("first_seen", ""))
+    results = send_test(session, cfg, entries[-1] if entries else None)
+    for name, err in results.items():
+        print(f"{name:<9} {'OK: test notification sent' if err is None else f'FAILED: {err}'}")
+    return 0 if all(err is None for err in results.values()) else 1
+
+
 def main(argv=None) -> int:
     for stream in (sys.stdout, sys.stderr):
         try:
@@ -64,6 +80,8 @@ def main(argv=None) -> int:
     ap.add_argument("--dry-run", action="store_true", default=_flag("DRY_RUN"))
     ap.add_argument("--seed-only", action="store_true", default=_flag("SEED_ONLY"))
     ap.add_argument("--verbose", action="store_true", default=_flag("VERBOSE"))
+    ap.add_argument("--test-notify", action="store_true", default=_flag("TEST_NOTIFY"),
+                    help="send one [TEST] notification to every configured channel and exit")
     ap.add_argument("--config", type=Path,
                     default=Path(os.environ.get("WATCHER_CONFIG") or ROOT / "config.json"))
     ap.add_argument("--state", type=Path,
@@ -77,13 +95,16 @@ def main(argv=None) -> int:
         print(f"ERROR: cannot read state file {args.state}: {e}", file=sys.stderr)
         return 1
 
+    session = requests.Session()
+    session.headers["User-Agent"] = USER_AGENT
+    if args.test_notify:
+        return run_test_notify(session, cfg, state)
+
     term, year = cfg["target"]["term"], cfg["target"]["year"]
     mode = "DRY RUN" if args.dry_run else "SEED ONLY" if args.seed_only else "live"
     print(f"Target: {term.title()} {year} | mode: {mode} | "
           f"{len(state['seen'])} postings already in state")
 
-    session = requests.Session()
-    session.headers["User-Agent"] = USER_AGENT
     timeout = float(cfg["http"].get("timeout", 30))
     retries = int(cfg["http"].get("retries", 2))
 
