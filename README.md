@@ -79,10 +79,32 @@ or emoji display correctly. Tapping a notification opens the apply link.
   - trailing slashes are removed
   - the remaining query parameters are sorted
   - the scheme is forced to `https`
-- The key is `sha1(canonical_url)[:16]`. A posting is **new** if its key isn't in
-  `state/seen.json`.
-- Dedupe is **global**. When several repos list the same job, the first source in
-  `config.json` order owns it, and you get one notification.
+- Boards often link **the same job at different URLs**, for example:
+  - `…/apply` or `…/application` suffixes
+  - `boards.` vs `job-boards.greenhouse.io`
+  - Workday locale segments and different Workday routes
+
+  So a posting is identified by its **job key**: the tracking system's own job ID,
+  pulled out of the URL.
+
+  | System | Job key |
+  |---|---|
+  | Greenhouse | `greenhouse:<id>` |
+  | Lever / Ashby | `lever:<uuid>` / `ashby:<uuid>` |
+  | Workday | `workday:<tenant>:<requisition>` |
+  | iCIMS | `icims:<tenant>:<id>` |
+
+  SmartRecruiters, Amazon, TikTok, LinkedIn, Workable, Apple and Jobvite links get
+  keys the same way. A link from any other site uses its canonical URL as the key.
+- A posting is **new** if neither its URL ID (`sha1(canonical_url)[:16]`, the key in
+  `state/seen.json`) nor its job key has been seen before. Job keys for recorded
+  postings are recomputed from their stored `url` on every run. That way, an
+  improvement to `job_key()` also covers postings recorded before it, without a state
+  migration.
+- Dedupe is **global** and happens *after* filtering. When several repos list the same
+  job, the first source in `config.json` order that keeps it owns it, and you get one
+  notification. If one board's copy is filtered out (for example because of a wrong
+  location), another board's copy can still get through.
 - A run sends at most `max_individual` (default 12) individual notifications. Anything
   beyond that goes into a single "+N more new Summer 2027 postings" summary, because
   these repos sometimes add 50+ roles at once.
@@ -114,7 +136,8 @@ or emoji display correctly. Tapping a notification opens the apply link.
   "section_exclude":  "(new.?grad|full.?time|phd|return offer)",  // matched against the README heading above the row
   "title_exclude":    "(new.?grad|university.?grad|entry.?level)",
   "title_include":    null,    // e.g. "(software|swe|backend|ml|data)" to keep only matching titles
-  "location_include": null     // e.g. "(remote|new york|ny|san francisco|sf)"
+  "location_include": null,    // e.g. "(remote|new york|ny|san francisco|sf)"
+  "countries": ["US", "CA", "UK"]  // null to allow every country
 }
 ```
 
@@ -122,6 +145,16 @@ or emoji display correctly. Tapping a notification opens the apply link.
 - Title filters are skipped for any posting whose title couldn't be recovered, and
   `location_include` is skipped for any posting with no location. A posting is never
   dropped just because data is missing.
+- `countries` keeps a posting if **any** of its locations is in an allowed country.
+  So "London, UK; Singapore" passes, and "Dublin, Ireland" doesn't.
+  - Supported codes are `US`, `CA` and `UK` (`GB` is accepted as an alias).
+  - Locations are matched on state and province codes and names, country names, and
+    major cities.
+  - Locations whose country can't be recognized, like a bare "Remote", are kept.
+  - Postings removed here show up as the `country` drop reason.
+  - speedyapply sometimes geocodes wrongly (for example "Bellevue, Australia" for
+    Bellevue, WA). Such jobs still get through when another board lists the real
+    location.
 - Any filter key can also be set on a single source to override the global value.
   For example, `"section_exclude": null` on one source turns section filtering off for
   just that source.
@@ -182,6 +215,7 @@ Drop reasons:
 | `unstated` | No season info and no source default |
 | `inactive` | The source marks the posting closed |
 | `section` / `title` / `location` | Removed by the matching regex filter |
+| `country` | Every recognized location is outside `countries` |
 | `dup` | The same URL appears twice in one source |
 | `bad url` | The link isn't a usable http(s) URL |
 
@@ -198,7 +232,8 @@ and state file paths.
 | [`parsers.py`](internwatch/parsers.py) | JSON feeds and README link extraction with table-row enrichment |
 | [`season.py`](internwatch/season.py) | `classify_season()` |
 | [`filtering.py`](internwatch/filtering.py) | Per-source filters and drop-reason counts |
-| [`urls.py`](internwatch/urls.py) | URL canonicalization, dedupe key, ATS allow/deny lists |
+| [`urls.py`](internwatch/urls.py) | URL canonicalization, ATS job keys (the dedupe key), ATS allow/deny lists |
+| [`location.py`](internwatch/location.py) | Recognizes US / Canada / UK / other countries in location text |
 | [`notify.py`](internwatch/notify.py) | ntfy, Pushover, and Discord senders, plus the individual-ping cap and summary |
 | [`config.py`](internwatch/config.py) | `config.json` loading and default filter/notification settings |
 | [`state.py`](internwatch/state.py) | Reads `state/seen.json` and writes it atomically |

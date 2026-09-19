@@ -28,6 +28,7 @@ from .filtering import filter_items
 from .notify import build_notifications, configured_channels, deliver
 from .parsers import PARSERS
 from .state import load_state, save_state
+from .urls import dedupe_key
 
 ROOT = Path(__file__).resolve().parent.parent
 USER_AGENT = "internship-watcher/1.0 (+https://github.com/features/actions)"
@@ -115,14 +116,14 @@ def main(argv=None) -> int:
         print("ERROR: every source failed; state left untouched.", file=sys.stderr)
         return 1
 
-    # Global dedupe: first source in config order to list a job owns it.
+    # Global dedupe on the ATS job key: first source in config order to list a job owns it.
     unique, owned, overlap = [], set(), Counter()
     for src, kept in per_source:
         for it in kept:
-            if it["id"] in owned:
+            if it["key"] in owned:
                 overlap[src["name"]] += 1
                 continue
-            owned.add(it["id"])
+            owned.add(it["key"])
             unique.append(it)
     total_kept = sum(len(k) for _, k in per_source)
     print(f"{'TOTAL':<14} {total_kept:>5} kept -> {len(unique):>5} unique after global dedupe"
@@ -132,7 +133,10 @@ def main(argv=None) -> int:
 
     seen, seeded = state["seen"], state["sources"]
     first_run = not seen
-    new = [it for it in unique if it["id"] not in seen]
+    # Keys are derived from each entry's stored canonical URL rather than saved, so
+    # improvements to job_key() apply to postings recorded before them.
+    seen_keys = {dedupe_key(e["url"]) for e in seen.values() if e.get("url")}
+    new = [it for it in unique if it["id"] not in seen and it["key"] not in seen_keys]
     if args.seed_only or first_run:
         to_notify = []
     else:

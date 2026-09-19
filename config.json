@@ -9,7 +9,8 @@
     "section_exclude": "(new.?grad|full.?time|phd|return offer)",
     "title_exclude": "(new.?grad|university.?grad|entry.?level)",
     "title_include": null,
-    "location_include": null
+    "location_include": null,
+    "countries": ["US", "CA", "UK"]
   },
   "notifications": {
     "max_individual": 12,

@@ -5,8 +5,10 @@ import re
 from collections import Counter, defaultdict
 
 from .config import DEFAULT_FILTERS
+from .location import countries_in, normalize_countries
 from .season import classify_season
-from .urls import canonicalize, url_id
+from .urls import canonicalize, dedupe_key, url_id
+
 
 def _compile(pattern):
     return re.compile(pattern, re.I) if pattern else None
@@ -19,6 +21,7 @@ def filter_items(src: dict, items: list[dict], cfg: dict) -> tuple[list[dict], C
     title_ex = _compile(filters["title_exclude"])
     title_in = _compile(filters["title_include"])
     loc_in = _compile(filters["location_include"])
+    countries = normalize_countries(filters["countries"])
 
     kept, drops, examples, seen_here = [], Counter(), defaultdict(list), set()
 
@@ -60,10 +63,18 @@ def filter_items(src: dict, items: list[dict], cfg: dict) -> tuple[list[dict], C
         if item["location"] and loc_in and not loc_in.search(item["location"]):
             drop("location", item)
             continue
-        uid = url_id(canonical)
-        if uid in seen_here:
+        # Keep a multi-location role if any location qualifies, and keep locations
+        # whose country can't be recognized (e.g. a bare "Remote").
+        if countries and item["location"]:
+            found = countries_in(item["location"])
+            if found and not found & countries:
+                drop("country", item)
+                continue
+        key = dedupe_key(canonical)
+        if key in seen_here:
             drop("dup", item)
             continue
-        seen_here.add(uid)
-        kept.append({**item, "id": uid, "canonical": canonical, "source": src["name"]})
+        seen_here.add(key)
+        kept.append({**item, "id": url_id(canonical), "key": key, "canonical": canonical,
+                     "source": src["name"]})
     return kept, drops, examples

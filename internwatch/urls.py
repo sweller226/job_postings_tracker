@@ -1,8 +1,9 @@
-"""Apply-URL canonicalization (the dedupe key) and ATS link detection for READMEs."""
+"""Apply-URL canonicalization, ATS job keys (the dedupe key) and ATS link detection."""
 from __future__ import annotations
 
 import hashlib
 import html
+import re
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 TRACKING_PARAMS = frozenset(p.lower() for p in """
@@ -40,6 +41,74 @@ def canonicalize(url: str) -> str | None:
 
 def url_id(canonical: str) -> str:
     return hashlib.sha1(canonical.encode("utf-8")).hexdigest()[:16]
+
+
+# (host suffix, key prefix, pattern over the path). All groups are joined into the key.
+_PATH_KEYS = (
+    ("greenhouse.io", "greenhouse", r"/jobs/(\d{5,})"),
+    ("lever.co", "lever", r"^/[^/]+/([0-9a-f]{8}-[0-9a-f-]{27})"),
+    ("ashbyhq.com", "ashby", r"^/[^/]+/([0-9a-f]{8}-[0-9a-f-]{27})"),
+    ("smartrecruiters.com", "smartrecruiters", r"^/[^/]+/(\d{6,})"),
+    ("amazon.jobs", "amazon", r"/jobs/(\d+)"),
+    ("lifeattiktok.com", "tiktok", r"/search/(\d+)"),
+    ("linkedin.com", "linkedin", r"/jobs/view/(?:[^/]*-)?(\d{6,})"),
+    ("jobs.apple.com", "apple", r"/details/(\d[\w-]*)"),
+    ("workable.com", "workable", r"/j/([0-9a-z]+)"),
+    ("jobvite.com", "jobvite", r"^/([^/]+)/job/(\w+)"),
+    ("icims.com", "icims", r"/jobs/(\d+)"),
+)
+# Workday puts the requisition ID after the last underscore of the title segment:
+# ..._JR2026520976-1, ..._REQ-020109, ..._R031642
+_WORKDAY_REQ_RE = re.compile(r"_((?:[a-z]{1,5}-?)?\d{3,}[\w.-]*)$", re.I)
+
+
+def _workday_key(host: str, path: str) -> str | None:
+    segs = [s for s in path.split("/") if s]
+    if host.endswith(".myworkdaysite.com"):
+        # wd5.myworkdaysite.com/[en-US/]recruiting/<tenant>/<site>/job/...
+        lower = [s.lower() for s in segs]
+        if "recruiting" not in lower or lower.index("recruiting") + 1 >= len(segs):
+            return None
+        tenant = segs[lower.index("recruiting") + 1]
+    else:
+        tenant = host.split(".")[0]  # <tenant>.wd5.myworkdayjobs.com
+    for seg in reversed(segs):  # skip trailing /apply, /applyManually
+        m = _WORKDAY_REQ_RE.search(seg)
+        if m:
+            return f"workday:{tenant}:{m.group(1)}"
+    return None
+
+
+def job_key(canonical: str) -> str | None:
+    """The ATS's own identifier for a job, or None when the URL isn't from a known ATS.
+
+    Boards link one job at different URLs: /apply and /application suffixes, locale
+    segments, boards. vs job-boards. hosts, different Workday routes. The job ID inside
+    those URLs is stable, so it's the better dedupe key.
+    """
+    parts = urlsplit(canonical)
+    host, path = (parts.hostname or "").lower(), parts.path
+    query = dict(parse_qsl(parts.query))
+    key = None
+    if query.get("gh_jid", "").isdigit():  # Greenhouse, including embeds on company sites
+        key = f"greenhouse:{query['gh_jid']}"
+    elif host.endswith((".myworkdayjobs.com", ".myworkdaysite.com")):
+        key = _workday_key(host, path)
+    else:
+        for suffix, prefix, pattern in _PATH_KEYS:
+            if host == suffix or host.endswith("." + suffix):
+                if prefix == "greenhouse" and query.get("token", "").isdigit():
+                    key = f"greenhouse:{query['token']}"  # boards.greenhouse.io/embed/job_app
+                elif m := re.search(pattern, path, re.I):
+                    tenant = [host.removesuffix(".icims.com")] if prefix == "icims" else []
+                    key = ":".join([prefix, *tenant, *m.groups()])
+                break
+    return key.lower() if key else None
+
+
+def dedupe_key(canonical: str) -> str:
+    """What makes two postings "the same job": the ATS job ID, else the canonical URL."""
+    return job_key(canonical) or canonical
 
 
 ATS_HOST_SUBSTRINGS = (
