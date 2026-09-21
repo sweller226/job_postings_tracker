@@ -2,7 +2,7 @@
 
 Get a phone notification when a new Summer 2027 internship is posted.
 
-This project runs as a GitHub Actions workflow. Every 20 minutes, it checks five community-maintained internship lists and sends you a push notification for any posting it hasn't seen before. Tap the notification to open the application page.
+This project runs as a GitHub Actions workflow. Every 20 minutes, it checks six community-maintained internship lists and sends you a push notification for any posting it hasn't seen before. Tap the notification to open the application page.
 
 There’s no server or database to run. The workflow keeps track of previously seen postings in `state/seen.json` and commits the updated file back to your repository. On a public repo, the whole thing runs for free.
 
@@ -28,9 +28,10 @@ https://boards.greenhouse.io/figma/jobs/6143238004
 | [zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships) | `jobs.json`         |
 | [SimplifyJobs/Summer2027-Internships](https://github.com/SimplifyJobs/Summer2027-Internships)                                                                     | README, HTML tables |
 | [speedyapply/2027-SWE-College-Jobs](https://github.com/speedyapply/2027-SWE-College-Jobs)                                                                         | README, pipe tables |
+| [negarprh/Canadian-Tech-Internships-2027](https://github.com/negarprh/Canadian-Tech-Internships-2027)                                                             | README, pipe tables |
 | [LorenzoLaCorte/european-tech-internships-2026](https://github.com/LorenzoLaCorte/european-tech-internships-2026)                                                 | README, pipe tables |
 
-Together, these lists contain roughly 3,200 postings matching the current filters, or about **2,450 unique jobs** after duplicates are removed.
+Together, these lists contain roughly 3,500 postings matching the current filters, or about **2,600 unique jobs** after duplicates are removed.
 
 The European list is mostly made up of 2026 new-grad roles, so it currently contributes nothing. It's left in the config in case that changes.
 

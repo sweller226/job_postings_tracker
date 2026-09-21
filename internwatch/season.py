@@ -27,6 +27,10 @@ OFF_SEASON_MONTHS = {
     ),
 }
 NO_SEASON = frozenset(("", "null", "none", "not stated", "n/a", "unknown", "tbd"))
+# "Spring Boot" and friends are a framework, not a season.
+SPRING_TECH_RE = re.compile(
+    r"(?<![a-z])spring(?=[\s\-]*(?:boot|framework|mvc|cloud|batch|security|data|jpa))", re.I
+)
 
 
 def _norm_term(t: str) -> str:
@@ -57,6 +61,9 @@ def classify_season(item: dict, term: str = "summer", year: int | str = 2027) ->
     fields = [season, " ; ".join(seasons), item.get("title"), _url_text(item.get("url")),
               item.get("section"), item.get("location")]
     hay = " | ".join(f for f in fields if f).lower()
+    # Location names seasons by accident ("Winter Park, FL", "Spring, TX"), so the
+    # term-only checks below ignore it, as they do the Spring framework.
+    hay_terms = SPRING_TECH_RE.sub(" ", " | ".join(f for f in fields[:-1] if f).lower())
 
     # 1. explicit term+year pairs, either order
     pairs = {(_norm_term(m.group(1)), m.group(2) or m.group(3)) for m in TERM_YEAR_RE.finditer(hay)}
@@ -79,11 +86,16 @@ def classify_season(item: dict, term: str = "summer", year: int | str = 2027) ->
             return "reject"
         return "match" if yy in years else "unknown"
 
+    has_term = re.search(rf"(?<![a-z]){term}(?![a-z])", hay_terms)
+
     # 4. right year, but an off-season start month and never the term itself
     months = OFF_SEASON_MONTHS.get(term)
-    if yy in years and months and months.search(hay) and not re.search(
-        rf"(?<![a-z]){term}(?![a-z])", hay
-    ):
+    if yy in years and months and months.search(hay) and not has_term:
+        return "reject"
+
+    # 4b. right year, but another term is named and the target one never is. Catches
+    # "Winter Co-op 2027", where words between the term and the year hide the pair.
+    if yy in years and not has_term and {_norm_term(t) for t in TERM_RE.findall(hay_terms)}:
         return "reject"
 
     # 5. fall back to bare years
