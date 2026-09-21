@@ -1,4 +1,4 @@
-"""Build notifications and deliver them via ntfy, Pushover and Discord."""
+"""Build notifications and deliver them via ntfy."""
 from __future__ import annotations
 
 import os
@@ -7,6 +7,11 @@ import time
 from urllib.parse import urlsplit
 
 import requests
+
+
+def ntfy_configured() -> bool:
+    return bool(os.environ.get("NTFY_TOPIC"))
+
 
 def _post(session, url, **kwargs) -> requests.Response:
     """POST with a small retry for 429/5xx, honoring Retry-After."""
@@ -35,33 +40,6 @@ def send_ntfy(session, note, ncfg):
         headers["Authorization"] = f"Bearer {os.environ['NTFY_TOKEN']}"
     # JSON body to the server root: unicode-safe, unlike X-Title headers.
     _post(session, server + "/", json=payload, headers=headers)
-
-
-def send_pushover(session, note, ncfg):
-    data = {"token": os.environ["PUSHOVER_TOKEN"], "user": os.environ["PUSHOVER_USER"],
-            "title": note["title"][:250], "message": note["message"][:1024],
-            "priority": max(-2, min(1, note["priority"] - 3))}
-    if note.get("url"):
-        data.update(url=note["url"][:512], url_title="Apply")
-    _post(session, "https://api.pushover.net/1/messages.json", data=data)
-
-
-def send_discord(session, note, ncfg):
-    embed = {"title": note["title"][:256], "description": note["message"][:4000]}
-    if note.get("url"):
-        embed["url"] = note["url"]
-    _post(session, os.environ["DISCORD_WEBHOOK_URL"], json={"embeds": [embed]})
-
-
-CHANNELS = {
-    "ntfy": (("NTFY_TOPIC",), send_ntfy),
-    "pushover": (("PUSHOVER_TOKEN", "PUSHOVER_USER"), send_pushover),
-    "discord": (("DISCORD_WEBHOOK_URL",), send_discord),
-}
-
-
-def configured_channels() -> list[str]:
-    return [name for name, (env, _) in CHANNELS.items() if all(os.environ.get(e) for e in env)]
 
 
 def build_notifications(items, cfg, sources_by_name) -> list[dict]:
@@ -93,12 +71,11 @@ def build_notifications(items, cfg, sources_by_name) -> list[dict]:
     return notes
 
 
-def send_test(session, cfg, example: dict | None) -> dict[str, Exception | None]:
-    """Send one test notification to every configured channel.
+def send_test(session, cfg, example: dict | None) -> Exception | None:
+    """Send one test notification, returning None on success or the error.
 
     `example` is a state/seen.json entry; the test is rendered exactly like a real alert
     for it (so tapping it exercises the apply link), with a [TEST] marker.
-    Returns {channel: None on success, else the error}.
     """
     if example:
         item = {"company": example.get("company", ""), "title": example.get("title", ""),
@@ -111,26 +88,22 @@ def send_test(session, cfg, example: dict | None) -> dict[str, Exception | None]
     note["title"] = f"[TEST] {note['title']}"[:200]
     note["message"] = ("Test from the internship watcher: notifications are working.\n\n"
                        + note["message"]).strip()
-    results = {}
-    for name in configured_channels():
-        try:
-            CHANNELS[name][1](session, note, cfg["notifications"])
-            results[name] = None
-        except Exception as e:
-            results[name] = e
-    return results
+    try:
+        send_ntfy(session, note, cfg["notifications"])
+        return None
+    except Exception as e:
+        return e
 
 
 def deliver(session, notes, cfg) -> tuple[int, int]:
-    """Send every note to every configured channel. Returns (successes, failures)."""
+    """Send every note via ntfy. Returns (successes, failures)."""
     ok = failed = 0
     for note in notes:
-        for name in configured_channels():
-            try:
-                CHANNELS[name][1](session, note, cfg["notifications"])
-                ok += 1
-            except Exception as e:
-                failed += 1
-                print(f"  notify via {name} failed: {e}", file=sys.stderr)
+        try:
+            send_ntfy(session, note, cfg["notifications"])
+            ok += 1
+        except Exception as e:
+            failed += 1
+            print(f"  ntfy send failed: {e}", file=sys.stderr)
         time.sleep(0.5)
     return ok, failed

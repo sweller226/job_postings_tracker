@@ -6,10 +6,9 @@ Environment:
   DRY_RUN=1      fetch, parse, filter, diff and print; send nothing, write nothing
   SEED_ONLY=1    record every current posting as seen without notifying
   VERBOSE=1      print a few example postings for every drop reason
-  TEST_NOTIFY=1  send one [TEST] notification to every configured channel and exit
-  NTFY_TOPIC, NTFY_SERVER (default https://ntfy.sh), NTFY_TOKEN
-  PUSHOVER_TOKEN, PUSHOVER_USER
-  DISCORD_WEBHOOK_URL
+  TEST_NOTIFY=1  send one [TEST] notification and exit
+  NTFY_TOPIC     ntfy topic to publish to; without it nothing is sent
+  NTFY_SERVER    ntfy server (default https://ntfy.sh), NTFY_TOKEN for auth
   WATCHER_CONFIG, WATCHER_STATE   override the config / state file paths
 """
 from __future__ import annotations
@@ -26,7 +25,7 @@ import requests
 
 from .config import load_config
 from .filtering import filter_items
-from .notify import build_notifications, configured_channels, deliver, send_test
+from .notify import build_notifications, deliver, ntfy_configured, send_test
 from .parsers import PARSERS
 from .state import load_state, save_state
 from .urls import dedupe_key
@@ -55,18 +54,15 @@ def _flag(name: str) -> bool:
 
 
 def run_test_notify(session, cfg, state) -> int:
-    """Send one [TEST] alert to every configured channel; non-zero exit if any fails."""
-    channels = configured_channels()
-    if not channels:
-        print("ERROR: no notification channels configured. Add NTFY_TOPIC (or the Pushover / "
-              "Discord secrets) as a *repository* secret; environment secrets are not passed "
-              "to these workflows.", file=sys.stderr)
+    """Send one [TEST] alert via ntfy; non-zero exit if it isn't delivered."""
+    if not ntfy_configured():
+        print("ERROR: NTFY_TOPIC is not set. Add it as a *repository* secret; environment "
+              "secrets are not passed to these workflows.", file=sys.stderr)
         return 1
     entries = sorted(state["seen"].values(), key=lambda e: e.get("first_seen", ""))
-    results = send_test(session, cfg, entries[-1] if entries else None)
-    for name, err in results.items():
-        print(f"{name:<9} {'OK: test notification sent' if err is None else f'FAILED: {err}'}")
-    return 0 if all(err is None for err in results.values()) else 1
+    err = send_test(session, cfg, entries[-1] if entries else None)
+    print("OK: test notification sent" if err is None else f"FAILED: {err}")
+    return 0 if err is None else 1
 
 
 def main(argv=None) -> int:
@@ -81,7 +77,7 @@ def main(argv=None) -> int:
     ap.add_argument("--seed-only", action="store_true", default=_flag("SEED_ONLY"))
     ap.add_argument("--verbose", action="store_true", default=_flag("VERBOSE"))
     ap.add_argument("--test-notify", action="store_true", default=_flag("TEST_NOTIFY"),
-                    help="send one [TEST] notification to every configured channel and exit")
+                    help="send one [TEST] notification via ntfy and exit")
     ap.add_argument("--config", type=Path,
                     default=Path(os.environ.get("WATCHER_CONFIG") or ROOT / "config.json"))
     ap.add_argument("--state", type=Path,
@@ -183,18 +179,17 @@ def main(argv=None) -> int:
                   f"({it['location'] or '?'})  {it['canonical']}")
         if len(new) > 25:
             print(f"  … {len(new) - 25} more")
-        print(f"Would send {len(notes)} notification(s) to: "
-              f"{', '.join(configured_channels()) or '(no channels configured)'}")
+        print(f"Would send {len(notes)} notification(s) via "
+              f"{'ntfy' if ntfy_configured() else 'nothing (NTFY_TOPIC not set)'}")
         print("DRY RUN: nothing sent, nothing written.")
         return 0
 
     if notes:
-        channels = configured_channels()
-        if not channels:
-            print("No notification channels configured; recording postings without sending.")
+        if not ntfy_configured():
+            print("NTFY_TOPIC is not set; recording postings without sending.")
         else:
             ok, failed = deliver(session, notes, cfg)
-            print(f"Sent {len(notes)} notification(s) via {', '.join(channels)}: "
+            print(f"Sent {len(notes)} notification(s) via ntfy: "
                   f"{ok} delivered, {failed} failed")
             if ok == 0:
                 print("ERROR: every delivery failed; not marking postings as seen so the "
