@@ -651,6 +651,13 @@
    "title": "Data Science Intern",
    "url": "https://coinbase.com/careers/positions/8175462?gh_jid=8175462"
   },
+  "074d53aaf1f8f7a0": {
+   "company": "Danaher",
+   "first_seen": "2026-09-25",
+   "source": "canadian-tech",
+   "title": "Hardware Engineer Co-op",
+   "url": "https://danaher.wd1.myworkdayjobs.com/DanaherJobs/job/Concord-Ontario-Canada/Hardware-Engineering-Co-op_R1317537"
+  },
   "07505089552dcdfe": {
    "company": "Constellation Energy",
    "first_seen": "2026-09-18",
@@ -1287,6 +1294,13 @@
    "source": "speedyapply",
    "title": "Full Stack Engineering Intern",
    "url": "https://apply.workable.com/talentpluto/j/717116FEE8"
+  },
+  "1046783b555f566e": {
+   "company": "Vanderlande Industries",
+   "first_seen": "2026-09-25",
+   "source": "canadian-tech",
+   "title": "Software Development Intern",
+   "url": "https://vanderlande.wd3.myworkdayjobs.com/careers/job/Quebec-Canada/Stage---Dveloppement-logiciel_JR38017"
   },
   "105a1d51f23f5d89": {
    "company": "Bank of Montreal",
@@ -2771,6 +2785,13 @@
    "source": "SimplifyJobs",
    "title": "Machine Learning Research Scientist Intern - Seed AI for Science - Atomistic AI 🎓",
    "url": "https://jobs.bytedance.com/en/position/7670855041951795509/detail"
+  },
+  "22382b843cba2b1d": {
+   "company": "Astranis",
+   "first_seen": "2026-09-25",
+   "source": "SimplifyJobs",
+   "title": "Reliability Test Intern",
+   "url": "https://job-boards.greenhouse.io/astranis/jobs/4705629006"
   },
   "2276cbd1dc8066f9": {
    "company": "ByteDance",
@@ -12537,6 +12558,13 @@
    "title": "Engineering Co-op - Summer 2027",
    "url": "https://careers-rovisys.icims.com/jobs/2131/job"
   },
+  "8c847000289a435a": {
+   "company": "Marathon Petroleum",
+   "first_seen": "2026-09-25",
+   "source": "SimplifyJobs",
+   "title": "Geographic Information Systems Intern/Co-op",
+   "url": "https://mpc.wd1.myworkdayjobs.com/en-US/MPCCareers/job/Tulsa-Oklahoma/Intern-Co-op---Midstream-Natural-Gas-and-NGL-Services-Geography-GIS--Summer-2027-_00024411"
+  },
   "8c9ff4904f2aaf69": {
    "company": "AMD",
    "first_seen": "2026-09-18",
@@ -18795,6 +18823,13 @@
    "title": "DC Power Product Management Intern - Summer 2027",
    "url": "https://egup.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/20279952"
   },
+  "ccd959aa01a39e6c": {
+   "company": "Vanderlande Industries",
+   "first_seen": "2026-09-25",
+   "source": "canadian-tech",
+   "title": "Software Development Intern",
+   "url": "https://vanderlande.wd3.myworkdayjobs.com/careers/job/Quebec-Canada/Stage---Dveloppement-logiciel_JR38019"
+  },
   "ccdae4d9884debc4": {
    "company": "Ernst & Young",
    "first_seen": "2026-09-18",
@@ -21028,6 +21063,13 @@
    "title": "Machine Learning Engineer Intern - E-Commerce Knowledge Graph 🎓",
    "url": "https://lifeattiktok.com/search/7676652813409552645"
   },
+  "e700a4f7667d8bb0": {
+   "company": "Electronic Arts",
+   "first_seen": "2026-09-25",
+   "source": "SimplifyJobs",
+   "title": "Gameplay Engineer Intern",
+   "url": "https://jobs.ea.com/en_US/careers/JobDetail/Gameplay-Engineer-Intern/216245"
+  },
   "e701d554c763b6bf": {
    "company": "PIMCO",
    "first_seen": "2026-09-18",
@@ -23149,6 +23191,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-09-25T01:02:12+00:00",
+ "updated_at": "2026-09-25T06:10:38+00:00",
  "version": 1
 }
