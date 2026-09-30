@@ -5775,6 +5775,13 @@
    "title": "Tech & Data Program Summer 2027 – Data Engineer Intern (Hartford)",
    "url": "https://thehartford.wd5.myworkdayjobs.com/Careers_External/job/Hartford-CT/Tech---Data-Program-Summer-2027---Data-Engineer-Intern--Hartford-_R2626103-1"
   },
+  "3d26476fda48f0e5": {
+   "company": "POET",
+   "first_seen": "2026-09-30",
+   "source": "SimplifyJobs",
+   "title": "Data Engineer Intern",
+   "url": "https://poet.wd1.myworkdayjobs.com/POET/job/Sioux-Falls-SD/Data-Engineering-Intern_R101787"
+  },
   "3d290891a3f728c7": {
    "company": "Waymo",
    "first_seen": "2026-09-18",
@@ -7937,6 +7944,13 @@
    "source": "SimplifyJobs",
    "title": "Software Engineer Intern - AI Infra Compute 🎓",
    "url": "https://jobs.bytedance.com/en/position/7667378931599214853/detail"
+  },
+  "541a67af08e2fed4": {
+   "company": "H&R Block",
+   "first_seen": "2026-09-30",
+   "source": "SimplifyJobs",
+   "title": "Financial Services Data Analytics Intern",
+   "url": "https://careers-hrblock.icims.com/jobs/76989/job"
   },
   "542fefb034163673": {
    "company": "Xcel Energy",
@@ -19901,6 +19915,13 @@
    "title": "AI Model Optimization & Software Engineer Intern/Co-op 🎓",
    "url": "https://careers.amd.com/jobs/92522"
   },
+  "c9379852178e3222": {
+   "company": "Invesco",
+   "first_seen": "2026-09-30",
+   "source": "SimplifyJobs",
+   "title": "Early Career Intern - Digital Asset Product",
+   "url": "https://invesco.wd1.myworkdayjobs.com/IVZearlycareers/job/New-York-New-York/Early-Career-Intern---Digital-Asset_R-15476"
+  },
   "c93a2c7ac701c1d7": {
    "company": "H&R Block",
    "first_seen": "2026-09-29",
@@ -22568,12 +22589,26 @@
    "title": "Sales Business Analyst Intern",
    "url": "https://tel.wd3.myworkdayjobs.com/tel-careers/job/Austin-RiverSouth/Sales-Business-Analyst-Intern_R26-01519"
   },
+  "e631ddca12dcca8c": {
+   "company": "Invesco",
+   "first_seen": "2026-09-30",
+   "source": "SimplifyJobs",
+   "title": "Early Career Intern - Digital Asset Product",
+   "url": "https://invesco.wd1.myworkdayjobs.com/en-US/IVZ/job/New-York-New-York/Early-Career-Intern---Digital-Asset_R-15476-1"
+  },
   "e6333578d547b96d": {
    "company": "Freddie Mac",
    "first_seen": "2026-09-18",
    "source": "speedyapply",
    "title": "Multifamily Software Development Intern - Summer 2027",
    "url": "https://freddiemac.wd5.myworkdayjobs.com/en-US/external/job/McLean-VA/Multifamily-Software-Development-Intern---Summer-2027_JR17564"
+  },
+  "e64458a141ac7a1b": {
+   "company": "UL Solutions",
+   "first_seen": "2026-09-30",
+   "source": "SimplifyJobs",
+   "title": "Product Management Intern",
+   "url": "https://fa-eups-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/ULSolutionsCareers/job/10625"
   },
   "e6450c44b33ad405": {
    "company": "Uline",
@@ -23204,6 +23239,13 @@
    "source": "SimplifyJobs",
    "title": "Technology Intern - Summer 2027",
    "url": "https://costar.wd1.myworkdayjobs.com/Costar_Campus/job/US-VA-Richmond---CoStar-Tower/Technology-Intern---Richmond--VA--Summer-2027-_R39665"
+  },
+  "ed20640078691078": {
+   "company": "GE Healthcare",
+   "first_seen": "2026-09-30",
+   "source": "SimplifyJobs",
+   "title": "Systems Engineer Intern",
+   "url": "https://gehc.wd5.myworkdayjobs.com/GEHC_ExternalSite/job/Salt-Lake-City/Summer-2027-Systems-Engineering-Internship_R4046627-1"
   },
   "ed46499bc1f43419": {
    "company": "Booz Allen",
@@ -23890,6 +23932,13 @@
    "source": "zshah101",
    "title": "University, 2027 Summer Games Software Developer Intern - McLean, VA",
    "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/McLean-VA/University--2027-Summer-Games-Software-Developer-Intern---McLean--VA_R0249801"
+  },
+  "f3be3aff92042d94": {
+   "company": "Qualcomm",
+   "first_seen": "2026-09-30",
+   "source": "SimplifyJobs",
+   "title": "Soft IP ASIC Engineer Intern",
+   "url": "https://qualcomm.eightfold.ai/careers/job/446721302471"
   },
   "f3efa60f819600d7": {
    "company": "AspenTech",
@@ -24934,6 +24983,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-09-30T07:21:04+00:00",
+ "updated_at": "2026-09-30T14:12:12+00:00",
  "version": 1
 }
