@@ -2751,6 +2751,13 @@
    "title": "Campus Undergraduate Summer Internship Program - 2027 Cybersecurity Analyst, Enterprise Technology Services- Sunrise, FL",
    "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011914"
   },
+  "1dfb507625311496": {
+   "company": "Leidos",
+   "first_seen": "2026-10-02",
+   "source": "zshah101",
+   "title": "Software Developer Intern",
+   "url": "https://leidos.wd5.myworkdayjobs.com/External/job/Annapolis-Junction-MD/Software-Developer-Intern_R-00193804"
+  },
   "1e1785426ef07447": {
    "company": "Point72",
    "first_seen": "2026-09-18",
@@ -11298,6 +11305,13 @@
    "title": "Electrical Engineer Intern",
    "url": "https://job-boards.greenhouse.io/mill/jobs/4737766005"
   },
+  "6fc4326c8c724f02": {
+   "company": "Amazon",
+   "first_seen": "2026-10-02",
+   "source": "zshah101",
+   "title": "Software Development Engineer Intern (Embedded Systems) - Summer 2027 (USA)",
+   "url": "https://amazon.jobs/en/jobs/10567914/software-development-engineer-intern-embedded-systems-summer-2027-usa"
+  },
   "6fe258c0ff84e19f": {
    "company": "American Express",
    "first_seen": "2026-09-18",
@@ -12704,6 +12718,13 @@
    "source": "SimplifyJobs",
    "title": "Data Engineering Intern - Summer 2027",
    "url": "https://ats.rippling.com/apexanalytix-careers/jobs/52353bce-cb36-423f-ae0a-f2057ef3b5d9"
+  },
+  "7d9faf6af1f204b1": {
+   "company": "Bedrock Robotics",
+   "first_seen": "2026-10-02",
+   "source": "zshah101",
+   "title": "2027 Internship Behavior ML Engineer, Learned Manipulation Policies",
+   "url": "https://jobs.ashbyhq.com/bedrock-robotics/96a6423e-7439-4cb4-9109-117b14e47f7c"
   },
   "7da220431a08debb": {
    "company": "RoviSys",
@@ -20104,6 +20125,13 @@
    "title": "Software Engineer Intern, Trust and Safety-Engineering",
    "url": "https://lifeattiktok.com/search/7662684280234232117"
   },
+  "c21ff5aa1369080c": {
+   "company": "Cox",
+   "first_seen": "2026-10-02",
+   "source": "zshah101",
+   "title": "Cybersecurity Intern - Summer 2027",
+   "url": "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Atlanta-GA/Cybersecurity-Intern---Summer-2027_R202683372"
+  },
   "c23ba97ef43f2fa7": {
    "company": "Westinghouse Electric Company",
    "first_seen": "2026-09-18",
@@ -22161,6 +22189,13 @@
    "source": "SimplifyJobs",
    "title": "Product Management Intern",
    "url": "https://abb.wd3.myworkdayjobs.com/external_career_page/job/New-Berlin-Wisconsin-United-States-of-America/Product-Management-Intern---Summer-2027_JR00047280"
+  },
+  "d6ca1f9a8a95dfda": {
+   "company": "Harvey",
+   "first_seen": "2026-10-02",
+   "source": "zshah101",
+   "title": "Software Engineering Intern (Summer 2027)",
+   "url": "https://jobs.ashbyhq.com/harvey/06d64648-b84b-48ae-94a2-d9c06dfdcb5d"
   },
   "d6f91dc48312c52f": {
    "company": "Visa",
@@ -26096,6 +26131,13 @@
    "title": "Gas Data Intern",
    "url": "https://xcelenergy.wd1.myworkdayjobs.com/External/job/Denver-CO-80223/Gas-Data-Intern--CO_JR116314-1"
   },
+  "fee2fe3fe5035a1b": {
+   "company": "Vanguard",
+   "first_seen": "2026-10-02",
+   "source": "zshah101",
+   "title": "College to Corporate IT Internship-Risk & Security Engineer (PA)",
+   "url": "https://vanguard.wd5.myworkdayjobs.com/vanguard_external/job/Malvern-PA/College-to-Corporate-IT-Internship-Risk---Security-Engineer--PA-_182784"
+  },
   "fef153b29b05bea5": {
    "company": "Johnson & Johnson",
    "first_seen": "2026-09-23",
@@ -26243,6 +26285,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-10-02T18:26:36+00:00",
+ "updated_at": "2026-10-02T22:31:13+00:00",
  "version": 1
 }
