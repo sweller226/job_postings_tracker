@@ -9618,6 +9618,13 @@
    "title": "Ecommerce Intern",
    "url": "https://egud.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/155427"
   },
+  "5affe641e61fe1f0": {
+   "company": "Waymo",
+   "first_seen": "2026-10-07",
+   "source": "SimplifyJobs",
+   "title": "Research Intern - Perception Foundation Models 🎓",
+   "url": "https://careers.withwaymo.com/jobs?gh_jid=8257801"
+  },
   "5b0ffa3f21d48189": {
    "company": "RentVision",
    "first_seen": "2026-09-23",
@@ -14552,6 +14559,13 @@
    "source": "SimplifyJobs",
    "title": "Behavior Machine Learning Engineer Intern - World Models",
    "url": "https://jobs.ashbyhq.com/bedrock-robotics/c51d682e-58ee-44de-886f-4cfacb56d2e1/application"
+  },
+  "852ab3a85aa04ba7": {
+   "company": "Johns Hopkins Applied Physics Laboratory",
+   "first_seen": "2026-10-07",
+   "source": "SimplifyJobs",
+   "title": "Acoustic Algorithm Development Engineer Intern",
+   "url": "https://careers.jhuapl.edu/jobs/59784"
   },
   "853a743b7431c0d4": {
    "company": "Erie Insurance Group",
@@ -20300,6 +20314,13 @@
    "title": "Developer, RBC Amplify",
    "url": "https://rbc.wd3.myworkdayjobs.com/rbcglobal1/job/HALIFAX-Nova-Scotia-Canada/Developer--RBC-Amplify-2027--Halifax_R-0000187119"
   },
+  "b7033285c756654d": {
+   "company": "Meta",
+   "first_seen": "2026-10-07",
+   "source": "SimplifyJobs",
+   "title": "Data Scientist Intern - Product Analytics",
+   "url": "https://metacareers.com/jobs/929757023499411"
+  },
   "b714357b12539519": {
    "company": "Motorola",
    "first_seen": "2026-09-18",
@@ -24738,6 +24759,13 @@
    "title": "AI Transformation Intern",
    "url": "https://jabil.wd5.myworkdayjobs.com/Jabil_Careers/job/Austin-TX/AI-Transformation-Intern_J2466044"
   },
+  "debabc0bf970ac8c": {
+   "company": "Sigma Computing",
+   "first_seen": "2026-10-07",
+   "source": "SimplifyJobs",
+   "title": "AI/ML PhD Intern 🎓",
+   "url": "https://job-boards.greenhouse.io/sigmacomputing/jobs/8015269003"
+  },
   "debfa38acda3fb3f": {
    "company": "Republic Airways",
    "first_seen": "2026-09-18",
@@ -25913,6 +25941,13 @@
    "source": "SimplifyJobs",
    "title": "Integration Test Engineer Intern - Marine",
    "url": "https://textron.taleo.net/careersection/textron/jobdetail.ftl?job=342674"
+  },
+  "e9a97bd0e7d480c8": {
+   "company": "RTX",
+   "first_seen": "2026-10-07",
+   "source": "SimplifyJobs",
+   "title": "Systems Engineering Test Equipment Intern",
+   "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CA-EL-SEGUNDO-R01--2000-E-Imperial-Hwy--BLDG-R01/Systems-Engineering-Test-Equipment-Intern--Summer-2027-_01879955"
   },
   "e9ad4dc530fe7fbc": {
    "company": "General Dynamics Information Technology",
@@ -28301,6 +28336,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-10-07T02:25:25+00:00",
+ "updated_at": "2026-10-07T09:11:39+00:00",
  "version": 1
 }
