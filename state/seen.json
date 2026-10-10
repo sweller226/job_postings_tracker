@@ -4102,6 +4102,13 @@
    "title": "Software Engineer Intern, Distributed NoSQL Database Systems",
    "url": "https://joinbytedance.com/search/7668373268886161669"
   },
+  "2669d640e6df84d8": {
+   "company": "Workday",
+   "first_seen": "2026-10-10",
+   "source": "SimplifyJobs",
+   "title": "Product Manager Intern",
+   "url": "https://workday.wd5.myworkdayjobs.com/Workday_Early_Career/job/USA-CA-Pleasanton/Product-Manager-Intern_JR-0110813"
+  },
   "266a931f916fc8ce": {
    "company": "Optiver",
    "first_seen": "2026-09-18",
@@ -8105,6 +8112,13 @@
    "source": "zshah101",
    "title": "Software Engineer, Intern, Bellevue - 2027",
    "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/US---Bellevue-WA/Software-Engineer--Intern--Bellevue---2027_REF088585W-2"
+  },
+  "484c0744157bcad1": {
+   "company": "AMD",
+   "first_seen": "2026-10-10",
+   "source": "SimplifyJobs",
+   "title": "Technical Marketing Performance Analysis Intern/Co-op",
+   "url": "https://careers.amd.com/jobs/91953"
   },
   "484db2f4b44f31ac": {
    "company": "Shure",
@@ -13719,6 +13733,13 @@
    "source": "SimplifyJobs",
    "title": "Product Management AI-Tool Intern - 8 months/40hrs per week",
    "url": "https://jobs.smartrecruiters.com/BoschGroup/744000148575999"
+  },
+  "782633602054ae8c": {
+   "company": "RTX",
+   "first_seen": "2026-10-10",
+   "source": "SimplifyJobs",
+   "title": "Software Engineering Intern",
+   "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-FL-MELBOURNE-312--795-W-Nasa-Blvd--BLDG-312/Software-Engineering-Intern--Summer-2027-_01876467"
   },
   "784025bd75cc7567": {
    "company": "Motorola",
@@ -29757,6 +29778,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-10-10T02:23:57+00:00",
+ "updated_at": "2026-10-10T14:55:41+00:00",
  "version": 1
 }
