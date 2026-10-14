@@ -1757,6 +1757,13 @@
    "title": "Software Engineer Intern",
    "url": "https://job-boards.greenhouse.io/duolingounirecruitment/jobs/8806878002"
   },
+  "0fbce85a39f04355": {
+   "company": "Northrop Grumman",
+   "first_seen": "2026-10-14",
+   "source": "zshah101",
+   "title": "2027 S/W Embedded Engineering Intern – Annapolis MD",
+   "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Maryland-Annapolis/XMLNAME-2027-S-W-Embedded-Engineering-Intern---Annapolis-MD_R10254697"
+  },
   "0fc73acfed59ca49": {
    "company": "Tower Research Capital",
    "first_seen": "2026-09-18",
@@ -2674,6 +2681,13 @@
    "title": "Analog Design Intern",
    "url": "https://semtech.wd1.myworkdayjobs.com/SemtechCareers/job/CAN---Ottawa-ON/Analog-Design-Intern_REQ3625"
   },
+  "183d757038feaba5": {
+   "company": "Northrop Grumman",
+   "first_seen": "2026-10-14",
+   "source": "SimplifyJobs",
+   "title": "Electronics Engineering Intern",
+   "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Maryland-Annapolis/XMLNAME-2027-H-W-Electronics-Engineering-Intern---Annapolis-MD_R10254689-1"
+  },
   "1851722167ec4e0a": {
    "company": "American Express",
    "first_seen": "2026-09-18",
@@ -3443,6 +3457,13 @@
    "source": "zshah101",
    "title": "IT Security Engineer Internship - Summer 2027",
    "url": "https://aoins.wd5.myworkdayjobs.com/AutoOwners/job/Lansing-MI/IT-Security-Engineer-Internship---Summer-2027_R_14477"
+  },
+  "1ea1171d79098430": {
+   "company": "Northrop Grumman",
+   "first_seen": "2026-10-14",
+   "source": "zshah101",
+   "title": "2027 S/W Cybersecurity Intern – Annapolis MD",
+   "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Maryland-Annapolis/XMLNAME-2027-S-W-Cybersecurity-Intern---Annapolis-MD_R10254705"
   },
   "1ea4570efe600dc9": {
    "company": "Radiance Technologies",
@@ -15666,6 +15687,13 @@
    "title": "Software Engineering Intern - Summer 2027",
    "url": "https://caci.wd1.myworkdayjobs.com/external/job/Sterling-VA-US/Software-Engineering-Intern---Summer-2027_332386"
   },
+  "81a3251c91cdc03f": {
+   "company": "Electronic Arts",
+   "first_seen": "2026-10-14",
+   "source": "SimplifyJobs",
+   "title": "Software Engineer Intern",
+   "url": "https://jobs.ea.com/en_US/careers/JobDetail/Software-Engineer-Intern/216241"
+  },
   "81aba2c7892b66df": {
    "company": "Baird",
    "first_seen": "2026-09-18",
@@ -18262,6 +18290,13 @@
    "source": "SimplifyJobs",
    "title": "Systems Engineer Intern - University",
    "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Rome-NY/University---2027-Summer-Games-Systems-Engineer-Intern---Rome--NY_R0248386"
+  },
+  "97c4a570972db8f8": {
+   "company": "Aon",
+   "first_seen": "2026-10-14",
+   "source": "SimplifyJobs",
+   "title": "Actuarial Consulting Industrial Placement Intern - Actuarial Consulting - Pensions",
+   "url": "https://jobs.aon.com/jobs/108017"
   },
   "97d289be78c863eb": {
    "company": "Stantec",
@@ -27475,6 +27510,13 @@
    "title": "Software Engineer Intern - MS/PhD - Simulation 🎓",
    "url": "https://careers.withwaymo.com/jobs?gh_jid=8221851"
   },
+  "e13d3125c9cea2ed": {
+   "company": "Assurant",
+   "first_seen": "2026-10-14",
+   "source": "SimplifyJobs",
+   "title": "Data Support Analyst Intern",
+   "url": "https://assurant.wd1.myworkdayjobs.com/en-US/Assurant_Careers/job/Illinois-Virtual/Summer-2027-Intern--Data-Support-Analyst_R-115717"
+  },
   "e13ea5787d3da249": {
    "company": "NVIDIA",
    "first_seen": "2026-09-18",
@@ -31185,6 +31227,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-10-14T04:57:31+00:00",
+ "updated_at": "2026-10-14T09:54:59+00:00",
  "version": 1
 }
