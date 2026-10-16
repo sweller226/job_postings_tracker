@@ -27,7 +27,6 @@ https://boards.greenhouse.io/figma/jobs/6143238004
 | [vanshb03/Summer2027-Internships](https://github.com/vanshb03/Summer2027-Internships)                                                                             | `listings.json`     |
 | [zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships) | `jobs.json`         |
 | [SimplifyJobs/Summer2027-Internships](https://github.com/SimplifyJobs/Summer2027-Internships)                                                                     | README, HTML tables |
-| [speedyapply/2027-SWE-College-Jobs](https://github.com/speedyapply/2027-SWE-College-Jobs)                                                                         | README, pipe tables |
 | [negarprh/Canadian-Tech-Internships-2027](https://github.com/negarprh/Canadian-Tech-Internships-2027)                                                             | README, pipe tables |
 | [LorenzoLaCorte/european-tech-internships-2026](https://github.com/LorenzoLaCorte/european-tech-internships-2026)                                                 | README, pipe tables |
 

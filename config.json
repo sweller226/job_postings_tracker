@@ -62,13 +62,6 @@
       "default_season": "Summer 2027"
     },
     {
-      "name": "speedyapply",
-      "type": "readme",
-      "url": "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/README.md",
-      "home": "https://github.com/speedyapply/2027-SWE-College-Jobs",
-      "default_season": "Summer 2027"
-    },
-    {
       "name": "canadian-tech",
       "type": "readme",
       "url": "https://raw.githubusercontent.com/negarprh/Canadian-Tech-Internships-2027/main/README.md",
