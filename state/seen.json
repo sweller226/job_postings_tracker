@@ -819,6 +819,13 @@
    "title": "Software Intern - Summer 2027",
    "url": "https://ebgj.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/253299"
   },
+  "0617ffb8acaf0fcd": {
+   "company": "Together AI",
+   "first_seen": "2026-10-17",
+   "source": "SimplifyJobs",
+   "title": "Research Intern 🎓",
+   "url": "https://job-boards.greenhouse.io/togetherai/jobs/5267198007"
+  },
   "061c1e4c61a45160": {
    "company": "Cmu",
    "first_seen": "2026-10-11",
@@ -1441,6 +1448,13 @@
    "source": "SimplifyJobs",
    "title": "Quantitative Intern",
    "url": "https://ecnf.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/301931"
+  },
+  "0b11dafd88e03448": {
+   "company": "onsemi",
+   "first_seen": "2026-10-17",
+   "source": "SimplifyJobs",
+   "title": "Applications Intern",
+   "url": "https://hctz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2506972"
   },
   "0b528d921578db87": {
    "company": "Waymo",
@@ -5564,6 +5578,13 @@
    "source": "zshah101",
    "title": "Software Development Engineer Intern, Annapurna Labs - 2027",
    "url": "https://amazon.jobs/en/jobs/10517567/software-development-engineer-intern-annapurna-labs-2027"
+  },
+  "2d1d62dc843e09cd": {
+   "company": "Ryan",
+   "first_seen": "2026-10-17",
+   "source": "SimplifyJobs",
+   "title": "Software Engineer Intern",
+   "url": "https://ryan.wd1.myworkdayjobs.com/Students-Graduates/job/Plano/Summer-2027-Intern--Software-Engineering_R0020843"
   },
   "2d2f5542c64757d6": {
    "company": "Marvell",
@@ -32823,6 +32844,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-10-17T00:55:07+00:00",
+ "updated_at": "2026-10-17T05:12:40+00:00",
  "version": 1
 }
