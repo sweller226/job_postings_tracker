@@ -1204,6 +1204,13 @@
    "title": "Software Engineering Intern - SWE/ML (Summer 2027)",
    "url": "https://jobs.ashbyhq.com/cyvl/8bfc4116-b0bb-47f8-bca1-7069a37db328"
   },
+  "0862e191fa1794cc": {
+   "company": "Philips",
+   "first_seen": "2026-10-20",
+   "source": "zshah101",
+   "title": "Intern – R&D Front-End Innovation Intern - Oral Healthcare – Bothell, WA – Summer 2027",
+   "url": "https://philips.wd3.myworkdayjobs.com/jobs-and-careers/job/Bothell-Washington-United-States/Intern---R-D-Front-End-Innovation-Intern---Oral-Healthcare---Bothell--WA---Summer-2027_593146"
+  },
   "08651b160ab004ab": {
    "company": "Leidos",
    "first_seen": "2026-10-06",
@@ -1385,6 +1392,13 @@
    "source": "zshah101",
    "title": "Software Engineering Intern, Backend (Summer 2027)",
    "url": "https://boards.greenhouse.io/robinhood/jobs/8123225?gh_jid=8123225&t=gh_src%3D"
+  },
+  "0a1366830413ca33": {
+   "company": "Berkshire Hathaway Energy",
+   "first_seen": "2026-10-20",
+   "source": "zshah101",
+   "title": "Intern - Software Engineering",
+   "url": "https://fa-essf-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10005930"
   },
   "0a1552cc9ff98120": {
    "company": "Southwest Airlines",
@@ -18501,6 +18515,13 @@
    "title": "Summer Associate Internship - Fraud Data Governance 🎓",
    "url": "https://fa-etbx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/nfcu/job/32310"
   },
+  "8c213fac76febb2f": {
+   "company": "Skydio",
+   "first_seen": "2026-10-20",
+   "source": "zshah101",
+   "title": "Embedded Software Engineer Intern - Winer 2027",
+   "url": "https://jobs.ashbyhq.com/skydio/370da6a5-5ae6-48fe-8e08-9b1dcc63bf34"
+  },
   "8c2ef52ba565a577": {
    "company": "Charles Schwab",
    "first_seen": "2026-09-19",
@@ -33236,6 +33257,13 @@
    "title": "Enterprise Operations Software Internship",
    "url": "https://hp.wd5.myworkdayjobs.com/ExternalCareerSite/job/Spring-Texas-United-States-of-America/Enterprise-Operations-Software-Internship_3167271-2"
   },
+  "f900976acaeb52a5": {
+   "company": "Skydio",
+   "first_seen": "2026-10-20",
+   "source": "zshah101",
+   "title": "Mobile Software Engineer Intern - Summer 2027",
+   "url": "https://jobs.ashbyhq.com/skydio/8a237302-3fe8-4403-b32b-7690f333ba52"
+  },
   "f903e15d6283dd72": {
    "company": "Affirm",
    "first_seen": "2026-10-09",
@@ -34153,6 +34181,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-10-20T18:41:23+00:00",
+ "updated_at": "2026-10-20T22:00:02+00:00",
  "version": 1
 }
