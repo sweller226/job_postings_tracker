@@ -14721,6 +14721,13 @@
    "title": "Data Science Intern - Global Decision Science - Credit & Fraud Risk 🎓",
    "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26013265"
   },
+  "5ed446e841b8eb45": {
+   "company": "Skydio",
+   "first_seen": "2026-10-26",
+   "source": "vanshb03",
+   "title": "Autonomy Engineer Intern, Deep Learning / Computer Vision",
+   "url": "https://go.vansh.nyc/BL"
+  },
   "5ed7c5ee1a9d538a": {
    "company": "Trimble",
    "first_seen": "2026-10-03",
@@ -17541,6 +17548,13 @@
    "source": "SimplifyJobs",
    "title": "Product Management Intern - Summer 2027",
    "url": "https://egup.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/20278558"
+  },
+  "6e3b70723e28f1f9": {
+   "company": "Skydio",
+   "first_seen": "2026-10-26",
+   "source": "SimplifyJobs",
+   "title": "Autonomy Engineer Intern - Deep Learning / Computer Vision",
+   "url": "https://jobs.ashbyhq.com/skydio/f1a72f5b-6157-47c1-8de9-379a32c7419f/application"
   },
   "6e3c0e281cd3cac6": {
    "company": "Nationwide",
@@ -23736,6 +23750,13 @@
    "source": "zshah101",
    "title": "Business Intelligence Developer Internship - Summer 2027",
    "url": "https://aoins.wd5.myworkdayjobs.com/AutoOwners/job/Lansing-MI/Business-Intelligence-Developer-Internship---Summer-2027_R_14772"
+  },
+  "940e550556c8d3a2": {
+   "company": "Hewlett Packard Enterprise",
+   "first_seen": "2026-10-26",
+   "source": "vanshb03",
+   "title": "AI/ML Developer Intern",
+   "url": "https://go.vansh.nyc/BM"
   },
   "94155573e22c6ab9": {
    "company": "Schonfeld",
@@ -31002,6 +31023,13 @@
    "source": "SimplifyJobs",
    "title": "Software Development Intern",
    "url": "https://jobs.jobvite.com/altamiracorps/job/oMqCAfw8"
+  },
+  "bedeffe38da0fa5f": {
+   "company": "FTI Consulting",
+   "first_seen": "2026-10-26",
+   "source": "SimplifyJobs",
+   "title": "Data & Analytics Intern",
+   "url": "https://fticonsulting.wd108.myworkdayjobs.com/FTIConsultingCareers/job/London-United-Kingdom/XMLNAME-2027-Summer-Internship--Data---Analytics_JR260771"
   },
   "beedfc371c7639ae": {
    "company": "Election Systems & Software",
@@ -41580,6 +41608,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-10-26T00:40:57+00:00",
+ "updated_at": "2026-10-26T05:37:29+00:00",
  "version": 1
 }
