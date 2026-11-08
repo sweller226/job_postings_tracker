@@ -4809,6 +4809,13 @@
    "title": "AI Engineer Intern",
    "url": "https://go.vansh.nyc/13t"
   },
+  "15040cf4fd4c483e": {
+   "company": "Ryan",
+   "first_seen": "2026-11-08",
+   "source": "vanshb03",
+   "title": "Software Engineer Intern",
+   "url": "https://go.vansh.nyc/1mO"
+  },
   "1517c0b6607c3e3d": {
    "company": "Databricks",
    "first_seen": "2026-10-13",
@@ -23876,6 +23883,13 @@
    "source": "vanshb03",
    "title": "AI Intern, Office of CEO & Head of Product",
    "url": "https://job-boards.greenhouse.io/eulerity/jobs/4722871006"
+  },
+  "6a6f1616d67e7312": {
+   "company": "Center for AI Safety (CAIS)",
+   "first_seen": "2026-11-08",
+   "source": "vanshb03",
+   "title": "Research Engineer Intern",
+   "url": "https://go.vansh.nyc/1mP"
   },
   "6a80e08dc98b48d0": {
    "company": "NXP Semiconductors",
@@ -44625,6 +44639,13 @@
    "title": "IT Software Engineer Intern",
    "url": "https://go.vansh.nyc/1d6"
   },
+  "c205135eae7e69d8": {
+   "company": "DoorDash",
+   "first_seen": "2026-11-08",
+   "source": "vanshb03",
+   "title": "Software Engineer Intern",
+   "url": "https://go.vansh.nyc/1mQ"
+  },
   "c2073c2ba2167bdc": {
    "company": "Allen Control Systems",
    "first_seen": "2026-09-30",
@@ -58723,6 +58744,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-11-08T10:43:29+00:00",
+ "updated_at": "2026-11-08T16:52:21+00:00",
  "version": 1
 }
