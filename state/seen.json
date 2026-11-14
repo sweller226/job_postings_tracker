@@ -53928,6 +53928,13 @@
    "title": "Reactor Software Engineering Intern",
    "url": "https://go.vansh.nyc/17z"
   },
+  "d5a42722828db599": {
+   "company": "Ericsson",
+   "first_seen": "2026-11-14",
+   "source": "vanshb03",
+   "title": "AI Software Engineer Intern",
+   "url": "https://go.vansh.nyc/1zB"
+  },
   "d5afc5261ab226f9": {
    "company": "Medline",
    "first_seen": "2026-10-04",
@@ -64372,6 +64379,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-11-14T08:20:42+00:00",
+ "updated_at": "2026-11-14T15:18:29+00:00",
  "version": 1
 }
