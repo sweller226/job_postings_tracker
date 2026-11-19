@@ -1,5 +1,12 @@
 {
  "seen": {
+  "00180124c40cc168": {
+   "company": "Qualcomm",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "GPU Compiler Development Intern - Interim Engineering Intern - HW",
+   "url": "https://qualcomm.eightfold.ai/careers/job/446722198182"
+  },
   "001ab50646150b8c": {
    "company": "Microsoft",
    "first_seen": "2026-10-16",
@@ -5607,6 +5614,13 @@
    "title": "AI Engineering Intern",
    "url": "https://weareroku.com/jobs/8345954?gh_jid=8345954"
   },
+  "162a19a497dbdebf": {
+   "company": "Lucid",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "Product Management Intern",
+   "url": "https://job-boards.greenhouse.io/lucidsoftware/jobs/6239818004"
+  },
   "162e4f63b6803e02": {
    "company": "Akuna Capital",
    "first_seen": "2026-09-18",
@@ -7839,6 +7853,13 @@
    "source": "vanshb03",
    "title": "Software Engineer Intern, Security & Identity",
    "url": "https://apply.careers.microsoft.com/careers/job/1970393557044771"
+  },
+  "1e7bd73e380bd050": {
+   "company": "Vibrantz Technologies",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Applied AI & Automation Intern",
+   "url": "https://go.vansh.nyc/1Ct"
   },
   "1e80d68a7ea73aef": {
    "company": "Plusgrade",
@@ -18060,6 +18081,13 @@
    "title": "Applied Research Science Intern 🎓",
    "url": "https://careersus-shure.icims.com/jobs/4967/job"
   },
+  "484e601a852b393b": {
+   "company": "Bristol Myers Squibb",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Undergrad Data Science Intern",
+   "url": "https://go.vansh.nyc/1Ck"
+  },
   "48580482a1daeaf1": {
    "company": "American Express",
    "first_seen": "2026-09-18",
@@ -23121,6 +23149,13 @@
    "title": "Optical Imaging Data Science Intern",
    "url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Massachusetts---Boston-MA-Parcel-B-Laboratory/XMLNAME-2027-Future-Talent-Program---Optical-Imaging-Data-Science-Intern---Intern_R412885"
   },
+  "5cbc1ac917927d8b": {
+   "company": "Marvell",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "MS AI Infrastructure Engineer Intern",
+   "url": "https://go.vansh.nyc/1Cp"
+  },
   "5cbf64dcf44696c9": {
    "company": "Southwest Airlines",
    "first_seen": "2026-10-01",
@@ -26361,6 +26396,13 @@
    "source": "vanshb03",
    "title": "AI Engineer Intern, Enterprise Technology Services",
    "url": "https://go.vansh.nyc/7c"
+  },
+  "68ccb026d02d0494": {
+   "company": "Camping World",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Junior AI Engineering Intern",
+   "url": "https://go.vansh.nyc/1CA"
   },
   "68cee88b829eb5c6": {
    "company": "P&G - Procter & Gamble",
@@ -32732,6 +32774,13 @@
    "title": "Solutions AI Lab Intern",
    "url": "https://job-boards.eu.greenhouse.io/baringa/jobs/5028472101"
   },
+  "8104eb5c20a4ce38": {
+   "company": "Lightmatter",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "Photonics Circuit Simulation Intern 🎓",
+   "url": "https://boards.greenhouse.io/lightmatter/jobs/5479849008"
+  },
   "810ccbb3065d3512": {
    "company": "Northrop Grumman",
    "first_seen": "2026-11-03",
@@ -33123,6 +33172,13 @@
    "source": "vanshb03",
    "title": "Digital Design Verification Engineering Intern",
    "url": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25016380"
+  },
+  "82c09537fd8625ba": {
+   "company": "Qualcomm",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "GPU Compiler Development Intern, HW",
+   "url": "https://go.vansh.nyc/1Cy"
   },
   "82ccde046d282d5a": {
    "company": "IXL Learning",
@@ -34446,6 +34502,13 @@
    "source": "zshah101",
    "title": "AI Processor Hardware/Software Integration Engineer Intern (Summer 2027)",
    "url": "https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---Texas---Richardson/AI-Processor-Hardware-Software-Integration-Engineer-Intern--Summer-2027-_JR-2604028"
+  },
+  "87cbdf4fd3806382": {
+   "company": "Samsung Semiconductor",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "LLM Inference Acceleration Architecture Intern, Distributed Memory-Centric Accelerators",
+   "url": "https://go.vansh.nyc/1Cw"
   },
   "87cf9891f39c883b": {
    "company": "Rivian and Volkswagen Group Technologies",
@@ -37261,6 +37324,13 @@
    "title": "Data Engineer Intern",
    "url": "https://job-boards.greenhouse.io/octaura/jobs/4662934007"
   },
+  "925fce3a6f497404": {
+   "company": "Samsung Semiconductor",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Architecture Research Engineer Intern, MoE Placement for Serving at Scale",
+   "url": "https://go.vansh.nyc/1Cm"
+  },
   "92677bd96409b21f": {
    "company": "Astera Labs",
    "first_seen": "2026-10-26",
@@ -37435,6 +37505,13 @@
    "source": "SimplifyJobs",
    "title": "Architecture Intern - MS 🎓",
    "url": "https://marvell.wd1.myworkdayjobs.com/MarvellCareers/job/Santa-Clara-CA/Architecture-Intern--MS---Summer-2027_2604436-1"
+  },
+  "92ec8665d8d3b626": {
+   "company": "Viavi Solutions",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Robotics Intern",
+   "url": "https://go.vansh.nyc/1Ci"
   },
   "92f20c3f00b34c9b": {
    "company": "State Farm",
@@ -37666,6 +37743,13 @@
    "source": "SimplifyJobs",
    "title": "Quantitative Engineer Intern 🎓",
    "url": "https://careers-ice.icims.com/jobs/14053/job"
+  },
+  "93d3e8473140572f": {
+   "company": "Motorola Solutions",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "RFIC Design Engineer Intern",
+   "url": "https://go.vansh.nyc/1Cl"
   },
   "93d497498b423f47": {
    "company": "Aptiv",
@@ -48034,6 +48118,13 @@
    "title": "Software Engineer Intern - Summer 2027",
    "url": "https://mckesson.wd3.myworkdayjobs.com/External_Careers/job/USA-CO-Longmont/Software-Engineer-Intern---Summer-2027_JR0152469"
   },
+  "bb1723159d728b6c": {
+   "company": "Samsung Semiconductor",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "SSD Firmware Engineer Intern",
+   "url": "https://go.vansh.nyc/1Cu"
+  },
   "bb18723b6fb768c3": {
    "company": "Javelin Global Commodities",
    "first_seen": "2026-10-28",
@@ -48985,6 +49076,13 @@
    "source": "zshah101",
    "title": "Summer 2027 Data Science Intern - Pittsburgh, PA",
    "url": "https://fnbcorp.wd501.myworkdayjobs.com/FNBCORP/job/Pittsburgh-PA/Summer-2027-Data-Science-Intern---Pittsburgh--PA_2026-02016"
+  },
+  "be60edce7a3177cb": {
+   "company": "Andersen",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "PhD Summer Intern 🎓",
+   "url": "https://careers.andersen.com/jobs/8348"
   },
   "be63acefc5e7e033": {
    "company": "CesiumAstro",
@@ -52038,6 +52136,13 @@
    "title": "Safety Methodologies Intern Co-op",
    "url": "https://jobs.lever.co/waabi/480d9d41-33d0-429a-8883-7f9ec305a30f/apply"
   },
+  "c93db8e8c044f7ff": {
+   "company": "HERE Technologies",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Software Engineer Intern",
+   "url": "https://go.vansh.nyc/1CC"
+  },
   "c9518506062c0d8e": {
    "company": "NBCUniversal",
    "first_seen": "2026-11-10",
@@ -52605,6 +52710,13 @@
    "title": "Replenishment Optimization Data & Analytics Co-op",
    "url": "https://myview.wd3.myworkdayjobs.com/paradox_careers/job/1-Presidents-Choice-Circle-Brampton-ON/Replenishment-Optimization-Data---Analytics---Co-op-Student_R2000697099"
   },
+  "cbc0042dc80cac37": {
+   "company": "Epic Games",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Tools Programmer Intern, Graphics",
+   "url": "https://go.vansh.nyc/1Cz"
+  },
   "cbc1446c238c643a": {
    "company": "QTS",
    "first_seen": "2026-10-14",
@@ -52898,6 +53010,13 @@
    "source": "speedyapply",
    "title": "Software Engineering Intern",
    "url": "https://copart.wd12.myworkdayjobs.com/en-US/copart/job/Dallas-TX---Headquarters/Software-Engineering-Intern_JR109673"
+  },
+  "cce653f2ad6a5421": {
+   "company": "Crusoe",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "AI Applied Research PhD Intern 🎓",
+   "url": "https://jobs.ashbyhq.com/crusoe/8d1d162e-7bed-44fb-aff8-6af75b62937b/application"
   },
   "ccfcc177900c00bf": {
    "company": "Ernst & Young",
@@ -53249,6 +53368,13 @@
    "title": "Tencent Cloud CPaaS Product Management Intern",
    "url": "https://tencent.wd1.myworkdayjobs.com/en-US/tencent_careers/job/US-California-Palo-Alto/Tencent-Cloud-CPaaS-Product-Management-Intern_R108019"
   },
+  "ce40dd90d77f05e6": {
+   "company": "Roblox",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "Software Engineer Intern - Engine",
+   "url": "https://careers.roblox.com/jobs/8386080?gh_jid=8386080"
+  },
   "ce42c10d75ef363b": {
    "company": "Mindex",
    "first_seen": "2026-10-02",
@@ -53402,6 +53528,13 @@
    "source": "SimplifyJobs",
    "title": "Firmware Engineer Intern/Co-op - Long Term",
    "url": "https://careers.amd.com/jobs/90297"
+  },
+  "cebe338be05a6359": {
+   "company": "Roblox",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Software Engineer Intern, Engine",
+   "url": "https://go.vansh.nyc/1Cn"
   },
   "cecca86294775e96": {
    "company": "IMC Trading",
@@ -55034,6 +55167,13 @@
    "title": "Data Engineer Intern - Data Platform Global Live",
    "url": "https://lifeattiktok.com/search/7674032146438162693"
   },
+  "d56802db21639795": {
+   "company": "HERE Technologies",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Data Science Intern",
+   "url": "https://go.vansh.nyc/1CB"
+  },
   "d56bcccb2611352b": {
    "company": "Microsoft",
    "first_seen": "2026-09-18",
@@ -55740,6 +55880,13 @@
    "source": "vanshb03",
    "title": "Technology Intern, Software Engineering, Enterprise API Services Development Team",
    "url": "https://go.vansh.nyc/eR"
+  },
+  "d884d27cf253d6c6": {
+   "company": "Lucid",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "Product Management Intern",
+   "url": "https://job-boards.greenhouse.io/lucidsoftware/jobs/6239814004"
   },
   "d88cd5e6aded102e": {
    "company": "7-Eleven",
@@ -56679,6 +56826,13 @@
    "title": "Software Engineering Intern",
    "url": "https://go.vansh.nyc/Wx"
   },
+  "dbdb5156443646d5": {
+   "company": "Sheetz",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "Business Intelligence Analytics Intern",
+   "url": "https://jobs.sheetz.com/jobs/86015"
+  },
   "dbdce4f8c4b32b2b": {
    "company": "WTW",
    "first_seen": "2026-10-17",
@@ -56979,6 +57133,13 @@
    "source": "SimplifyJobs",
    "title": "Software Engineer Intern - Digital Product: Software Engineering",
    "url": "https://generalmotors.wd5.myworkdayjobs.com/en-CA/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern---Digital-Product--Software-Engineering_JR-202620546"
+  },
+  "dcf85d6d90d9afe0": {
+   "company": "Syngenta Group",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Data Science Intern",
+   "url": "https://go.vansh.nyc/1Co"
   },
   "dcfafa6daefcccb9": {
    "company": "Highmark Health",
@@ -58821,6 +58982,13 @@
    "title": "Software Developer Intern",
    "url": "https://go.vansh.nyc/BU"
   },
+  "e3fc97471f3e635d": {
+   "company": "Microsoft",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Research Intern, Computer Vision and Deep Learning",
+   "url": "https://go.vansh.nyc/1Cv"
+  },
   "e4047b5ba439757d": {
    "company": "Costco",
    "first_seen": "2026-11-03",
@@ -59870,6 +60038,13 @@
    "source": "zshah101",
    "title": "2027 US Software Engineering Internship",
    "url": "https://job-boards.greenhouse.io/axontalentcommunity/jobs/7837133003"
+  },
+  "e7b76c7e18acb48d": {
+   "company": "Anduril",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "Business Systems Engineer Intern",
+   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5300647007"
   },
   "e7b7ed7b3c234ab1": {
    "company": "Visa",
@@ -65779,6 +65954,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-11-18T18:52:34+00:00",
+ "updated_at": "2026-11-19T00:51:05+00:00",
  "version": 1
 }
