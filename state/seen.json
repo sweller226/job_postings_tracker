@@ -3164,6 +3164,13 @@
    "title": "Software Developer Intern",
    "url": "https://jobs.smartrecruiters.com/Winsupply1/3743990015014717-software-developer-intern-?oga=true"
   },
+  "0baeb069a7b2908f": {
+   "company": "Lockheed Martin",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Software Engineer Intern",
+   "url": "https://go.vansh.nyc/1CG"
+  },
   "0bba67c25135a8f1": {
    "company": "Verizon Communications",
    "first_seen": "2026-10-20",
@@ -15554,6 +15561,13 @@
    "title": "Technical Intern",
    "url": "https://go.vansh.nyc/1is"
   },
+  "3e5b6da3be5f0993": {
+   "company": "Bread Financial",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Cybersecurity Intern",
+   "url": "https://go.vansh.nyc/1CF"
+  },
   "3e65bddbaab4954e": {
    "company": "Ambrook",
    "first_seen": "2026-09-18",
@@ -16302,6 +16316,13 @@
    "source": "speedyapply",
    "title": "Execution & Topology Software Engineering Intern - Summer 2027",
    "url": "https://wing.com/careers/8872477002?gh_jid=8872477002"
+  },
+  "40cf0f00a2b3386b": {
+   "company": "Carnegie Mellon University",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "AI Engineer Intern - Mission Innovation Lab",
+   "url": "https://cmu.wd115.myworkdayjobs.com/SEI/job/Pittsburgh-PA/AI-Engineer-Intern---Mission-Innovation-Lab--Summer-2027-_2025364-1"
   },
   "40d0bea8f6bdbb99": {
    "company": "Cigna Group",
@@ -23127,6 +23148,13 @@
    "source": "SimplifyJobs",
    "title": "Public Markets Quants Intern - Quants (Public Markets)",
    "url": "https://ekbq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/1941"
+  },
+  "5cac36283fe1fbd7": {
+   "company": "Workstream",
+   "first_seen": "2026-11-19",
+   "source": "vanshb03",
+   "title": "Full Stack Engineer Intern",
+   "url": "https://go.vansh.nyc/1CE"
   },
   "5cb4c3fa23368dd2": {
    "company": "GAF",
@@ -33404,6 +33432,13 @@
    "title": "ASIC Engineer Intern",
    "url": "https://go.vansh.nyc/hA"
   },
+  "83a5ba80cebd8faf": {
+   "company": "Toyota Research Institute",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "Robotics Intern - Generalist Robot Learning 🎓",
+   "url": "https://jobs.lever.co/tri/4cac9569-cc90-4dcd-96b8-d9777c35c943/apply"
+  },
   "83a8d16c67764e27": {
    "company": "Motorola Solutions",
    "first_seen": "2026-10-14",
@@ -35202,6 +35237,13 @@
    "source": "zshah101",
    "title": "Flight Software Engineer Intern (Summer 2027)",
    "url": "https://jobs.ashbyhq.com/reliable-robotics/cbd31c94-5a83-4d1e-8252-de67a5e594ed"
+  },
+  "8a318d9fb0f716f5": {
+   "company": "Pyrotek",
+   "first_seen": "2026-11-19",
+   "source": "SimplifyJobs",
+   "title": "Product Management Intern",
+   "url": "https://jobs.smartrecruiters.com/Pyrotek3/744000162385949"
   },
   "8a36fab8b3f1f070": {
    "company": "American Express",
@@ -65954,6 +65996,6 @@
    "seeded_at": "2026-09-18"
   }
  },
- "updated_at": "2026-11-19T00:51:05+00:00",
+ "updated_at": "2026-11-19T08:12:16+00:00",
  "version": 1
 }
