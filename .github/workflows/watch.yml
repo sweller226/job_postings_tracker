@@ -1,8 +1,9 @@
 name: Watch internship repos
 
 on:
-  schedule:
-    - cron: "*/20 * * * *"
+  # Temporarily disabled. Uncomment to resume scheduled runs.
+  # schedule:
+  #   - cron: "*/20 * * * *"
   workflow_dispatch:
     inputs:
       seed_only:
